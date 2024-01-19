@@ -1,0 +1,9 @@
+name: carving_knife_1 # same as file name 
+category: carving_knife
+model: "15_1"
+
+pos: [0.6, -0.5, 0.491]
+orn: [0.8888057493570607, -0.05790682765504535, -0.05888586022932154] # euler angle in x y z in radian 
+offset: [-0.07823583,0.02043504,0.02264073]
+
+# offset: [-0.07841982, 0.01809591,  0.02076265]

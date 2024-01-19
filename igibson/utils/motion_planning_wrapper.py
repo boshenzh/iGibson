@@ -492,9 +492,9 @@ class MotionPlanningWrapper(object):
             if self.mode in ["gui_non_interactive", "gui_interactive"]:
                 for joint_way_point in arm_path:
                     set_joint_positions(self.robot_id, self.arm_joint_ids, joint_way_point)
-                    set_base_values_with_z(self.robot_id, base_pose, z=self.initial_height)
+                    #set_base_values_with_z(self.robot_id, base_pose, z=self.initial_height)
                     self.simulator_sync()
-                    # sleep(0.02)  # animation
+                    #sleep(0.02)  # animation
             else:
                 set_joint_positions(self.robot_id, self.arm_joint_ids, arm_path[-1])
         else:
@@ -586,3 +586,23 @@ class MotionPlanningWrapper(object):
             log.debug("Teleporting arm to the default configuration")
             set_joint_positions(self.robot_id, self.arm_joint_ids, self.arm_default_joint_positions)
             self.simulator_sync()
+            
+    def cus_dry_run_arm_plan(self, arm_path):
+        """
+        Dry run arm motion plan by setting the arm joint position without physics simulation
+
+        :param arm_path: arm trajectory or None if no plan can be found
+        """
+        base_pose = get_base_values(self.robot_id)
+        if arm_path is not None:
+            if self.mode in ["gui_non_interactive", "gui_interactive"]:
+                for joint_way_point in arm_path:
+                    set_joint_positions(self.robot_id, self.arm_joint_ids, joint_way_point)
+                    #self.simulator_sync()
+                    self.simulator_step()
+                    sleep(0.03)  # animation
+            else:
+                set_joint_positions(self.robot_id, self.arm_joint_ids, arm_path[-1])
+        else:
+            set_joint_positions(self.robot_id, self.arm_joint_ids, self.arm_default_joint_positions)
+

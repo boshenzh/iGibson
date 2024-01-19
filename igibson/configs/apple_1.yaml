@@ -1,0 +1,7 @@
+name: apple_1
+category: apple
+
+model: "00_1"
+pos: [0.3, -0.8, 0.6]
+orn: [0, 0, 0]
+offset: [0,0,0]

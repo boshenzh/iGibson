@@ -1,0 +1,7 @@
+name: green_onion_1 # same as file name 
+category: green_onion
+model: "green_onion_000"
+
+pos: [0.5, -0.8, 0.5]
+orn: [0, 0, 2] # euler angle in x y z in radian 
+offset: [ 2.99419239e-02, -9.61551459e-05,  2.66438836e-02]
