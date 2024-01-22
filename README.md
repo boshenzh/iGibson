@@ -1,11 +1,12 @@
 # Script for Picking Up / Dropping Objects in iGibson
+<img src="./docs/images/knife_grab_drop.gif" width="200"> 
 
 This project is built based on [iGibson](https://github.com/StanfordVL/iGibson), a Simulation Environment designed by [Stanford Vision and Learning Lab (SVL)](https://svl.stanford.edu/) for training robots in large, realistic, interactive scenes.
 
 I have written scripts to control the Fetch robot, enabling it to pick up an object from a table and drop it at a specified location.
 
 To use the script, please follow the instructions in the [iGibson Documentation](http://svl.stanford.edu/igibson/docs/) to quickly start and download the required assets and datasets for an interactive scene.
-<img src="./docs/images/knife_grab_drop.gif" width="250"> 
+
 
 ## Installing
 
