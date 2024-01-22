@@ -40,7 +40,7 @@ log = logging.getLogger(__name__)
 
 def main(selection="user", headless=False, short_exec=False):
     """
-    This script takes arm to desired position x, y, z in the scene. 
+    This script takes arm to desired position x, y, z in the scene using keyboard/yaml file. control keyboard by entering x,y,z or open/close 
     """
     print("*" * 80 + "\nDescription:" + main.__doc__ + "*" * 80)
     parser = argparse.ArgumentParser()
